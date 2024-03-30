@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Chaser</title>
+</head>
+<body>
+    <div class="container">
+        <form id="task-form">
+            <label>
+                <span>Task Name:</span>
+                <input type="text" id="taskName">
+            </label>
+            <button type="submit" id="add-task">Add Task</button>
+        </form>
+        <div class="task-list">
+            <div id="active-tasks">
+                <h4>Active Tasks</h4>
+                <p>No active tasks</p>
+            </div>
+            <div id="completed-tasks">
+                <h4>Completed Tasks</h4>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

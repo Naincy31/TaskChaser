@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 40px;
+}
+
+#task-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#task-form label{
+    display: block;
+    margin-bottom: 15px;
+}
+
+#task-form span{
+    display: block;
+    margin-bottom: 5px;
+}
+
+#task-form input{
+    padding: 10px;
+    width: 100%;
+}
+
+#task-form button{
+    cursor: pointer;
+    background-color: #ff8c1a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid #ff8c1a;
+    height: 400px;
+    width: 350px;
+    overflow: auto;
+}
+
+#active-tasks, #completed-tasks{
+    flex: 1;
+}
+
+#active-tasks > p{
+    text-align: center;
+    opacity: 0.5;
+}
+
+#completed-tasks{
+    display: none;
+}
+
+.task-list h4{
+    text-align: center;
+}
+
+.task-list .task{
+    margin: 5px;
+    display: flex;
+    border: 1px solid #e65c00;
+    padding: 0 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.task-list .task:hover{
+    transform: scaleY(1.1);
+}
+
+.task:nth-child(1){
+    margin-top: 10px;
+}
+
+.task:last-child{
+    margin-bottom: 10px;
+}
+
+.task-list .task .delete{
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: red;
+    font-size: 24px;
+}
+
+.task .completed{
+    text-decoration: line-through;
+}
+
+#completed-tasks .task{
+    border: 1px solid #70db70;
+}
